@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Professora • Julia Maria — Recursos Pedagógicos 1º ao 5º ano</title>
+  <meta name="description" content="Site pedagógico com atividades, moldes e materiais de apoio para o 1º ao 5º ano, organizado por série, disciplina e BNCC. Gratuito e intuitivo." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- TailwindCSS (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ["Poppins", "system-ui", "-apple-system", "Segoe UI", "Roboto", "Inter", "sans-serif"],
+            display: ["Quicksand", "Poppins", "sans-serif"],
+          },
+          colors: {
+            brand: {
+              50:  '#fff1f7',
+              100: '#ffe4ef',
+              200: '#fec7dd',
+              300: '#fea3c8',
+              400: '#fd7fb1',
+              500: '#fb5b9a',
+              600: '#e23a84',
+              700: '#bf2f6e',
+              800: '#9c265a',
+              900: '#7c1d47'
+            },
+            ink: {
+              700: '#334155',
+              500: '#475569',
+              300: '#94a3b8'
+            }
+          },
+          boxShadow: {
+            soft: '0 15px 35px rgba(251,91,154,0.15)',
+            card: '0 10px 25px rgba(2,6,23,0.06)'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .glass { backdrop-filter: saturate(160%) blur(10px); background: rgba(255,255,255,0.75); }
+    .chip { @apply text-xs px-2 py-1 rounded-full border; }
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0}
+  </style>
+</head>
+<body class="font-sans bg-gradient-to-b from-brand-50 via-white to-white text-ink-700">
+  <!-- Barra superior -->
+  <header class="sticky top-0 z-50 backdrop-blur bg-white/80 border-b border-pink-100">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#home" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-2xl bg-brand-600 text-white grid place-items-center shadow-soft">
+          <!-- Ícone caderno -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4h12a2 2 0 012 2v12a2 2 0 01-2 2H4V4zM8 4v16"/></svg>
+        </div>
+        <div class="leading-tight">
+          <p class="text-xs tracking-widest font-semibold text-brand-700 uppercase">Professora</p>
+          <p class="text-lg font-extrabold -mt-1 tracking-tight group-hover:text-brand-700">Julia Maria</p>
+        </div>
+      </a>
+      <nav class="hidden md:flex items-center gap-6" aria-label="Navegação">
+        <a class="hover:text-brand-700" href="#atividades">Atividades</a>
+        <a class="hover:text-brand-700" href="#moldes">Moldes</a>
+        <a class="hover:text-brand-700" href="#apoio">Apoio</a>
+        <a class="hover:text-brand-700" href="#sobre">Sobre</a>
+        <a class="hover:text-brand-700" href="#contato">Contato</a>
+      </nav>
+      <button id="btnMenu" class="md:hidden p-2 rounded-xl hover:bg-brand-100" aria-label="Abrir menu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <div id="mobileMenu" class="md:hidden hidden border-t border-rose-100 bg-white">
+      <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-3 flex flex-col gap-2">
+        <a class="py-2" href="#atividades">Atividades</a>
+        <a class="py-2" href="#moldes">Moldes</a>
+        <a class="py-2" href="#apoio">Apoio</a>
+        <a class="py-2" href="#sobre">Sobre</a>
+        <a class="py-2" href="#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="relative overflow-hidden">
+    <div class="absolute -top-24 -right-24 w-80 h-80 rounded-full bg-brand-200/60 blur-3xl"></div>
+    <div class="absolute -bottom-28 -left-20 w-96 h-96 rounded-full bg-brand-300/40 blur-3xl"></div>
+
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20 grid lg:grid-cols-2 gap-10 items-center">
+      <div>
+        <p class="text-sm tracking-widest font-semibold text-brand-700 uppercase">Professora</p>
+        <h1 class="font-display text-5xl sm:text-6xl font-extrabold leading-tight tracking-tight">
+          Julia <span class="text-brand-700">Maria</span>
+        </h1>
+        <p class="mt-4 text-lg text-ink-500">Recursos pedagógicos práticos para o <strong>1º ao 5º ano</strong>: atividades imprimíveis, moldes e materiais de apoio alinhados à BNCC — tudo gratuito.</p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="#atividades" class="inline-flex items-center gap-2 px-5 py-3 rounded-2xl bg-brand-600 text-white font-semibold shadow-soft hover:bg-brand-700">
+            Explorar atividades
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#moldes" class="inline-flex items-center gap-2 px-5 py-3 rounded-2xl bg-white text-brand-700 border border-brand-200 font-semibold hover:bg-brand-50">
+            Ver moldes
+          </a>
+        </div>
+        <p class="mt-4 text-sm text-ink-300">Licença: Creative Commons BY 4.0 — use, adapte e credite.</p>
+      </div>
+      <div class="relative">
+        <div class="glass rounded-3xl p-6 shadow-card border border-rose-100">
+          <p class="text-sm font-semibold uppercase tracking-wide text-ink-300">Busca rápida</p>
+          <div class="mt-3 grid sm:grid-cols-3 gap-3">
+            <div class="sm:col-span-2">
+              <label for="q" class="sr-only">Buscar</label>
+              <input id="q" type="search" placeholder="Ex.: frações, pontuação, fábulas…" class="w-full rounded-2xl border-rose-200 focus:border-brand-500 focus:ring-brand-500" />
+            </div>
+            <button id="btnBuscar" class="rounded-2xl px-4 py-2 bg-brand-600 text-white font-semibold hover:bg-brand-700">Buscar</button>
+          </div>
+          <div class="mt-4 grid grid-cols-3 sm:grid-cols-6 gap-2 text-sm">
+            <button data-ano="1" class="filtroAno rounded-xl px-3 py-2 bg-rose-50 hover:bg-rose-100 border border-rose-200">1º ano</button>
+            <button data-ano="2" class="filtroAno rounded-xl px-3 py-2 bg-rose-50 hover:bg-rose-100 border border-rose-200">2º ano</button>
+            <button data-ano="3" class="filtroAno rounded-xl px-3 py-2 bg-rose-50 hover:bg-rose-100 border border-rose-200">3º ano</button>
+            <button data-ano="4" class="filtroAno rounded-xl px-3 py-2 bg-rose-50 hover:bg-rose-100 border border-rose-200">4º ano</button>
+            <button data-ano="5" class="filtroAno rounded-xl px-3 py-2 bg-rose-50 hover:bg-rose-100 border border-rose-200">5º ano</button>
+            <button data-ano="all" class="filtroAno rounded-xl px-3 py-2 bg-rose-50 hover:bg-rose-100 border border-rose-200">Todos</button>
+          </div>
+          <div class="mt-4 flex items-center gap-2 text-xs text-ink-300">
+            <!-- Pequena "arte" com desenhos em SVG -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 19.5V4.5A2.5 2.5 0 016.5 2h8A2.5 2.5 0 0117 4.5v15l-6.5-3L4 19.5z"/></svg>
+            <span>Design com ilustrações de caderno, lápis e livros.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-24">
+    <!-- ATIVIDADES -->
+    <section id="atividades" class="scroll-mt-24">
+      <div class="flex items-end justify-between flex-wrap gap-4">
+        <div>
+          <h2 class="text-3xl font-extrabold tracking-tight">Atividades</h2>
+          <p class="text-ink-500">Filtre por ano e disciplina. Baixe em PDF.</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <label for="fDisc" class="sr-only">Disciplina</label>
+          <select id="fDisc" class="rounded-2xl border-rose-200 focus:border-brand-500 focus:ring-brand-500">
+            <option value="all">Todas as disciplinas</option>
+            <option>Português</option>
+            <option>Matemática</option>
+            <option>Ciências</option>
+            <option>História</option>
+            <option>Geografia</option>
+            <option>Arte</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Tabs de Anos -->
+      <div class="mt-6 flex flex-wrap gap-2" role="tablist">
+        <button class="tabAno active px-4 py-2 rounded-2xl border border-brand-200 bg-brand-100 font-semibold" data-ano="all" role="tab">Todos</button>
+        <button class="tabAno px-4 py-2 rounded-2xl border hover:bg-rose-50" data-ano="1" role="tab">1º ano</button>
+        <button class="tabAno px-4 py-2 rounded-2xl border hover:bg-rose-50" data-ano="2" role="tab">2º ano</button>
+        <button class="tabAno px-4 py-2 rounded-2xl border hover:bg-rose-50" data-ano="3" role="tab">3º ano</button>
+        <button class="tabAno px-4 py-2 rounded-2xl border hover:bg-rose-50" data-ano="4" role="tab">4º ano</button>
+        <button class="tabAno px-4 py-2 rounded-2xl border hover:bg-rose-50" data-ano="5" role="tab">5º ano</button>
+      </div>
+
+      <div id="listaAtiv" class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+      <div id="paginacao" class="mt-6 flex items-center justify-center gap-2"></div>
+    </section>
+
+    <!-- MOLDES -->
+    <section id="moldes" class="mt-16 scroll-mt-24">
+      <div class="flex items-end justify-between flex-wrap gap-4">
+        <div>
+          <h2 class="text-3xl font-extrabold tracking-tight">Moldes e Templates</h2>
+          <p class="text-ink-500">Cartazes, jogos e fichas — por ano do 1º ao 5º.</p>
+        </div>
+      </div>
+
+      <div class="mt-6 flex flex-wrap gap-2" role="tablist">
+        <button class="tabMolde active px-4 py-2 rounded-2xl border border-brand-200 bg-brand-100 font-semibold" data-ano="all" role="tab">Todos</button>
+        <button class="tabMolde px-4 py-2 rounded-2xl border hover:bg-rose-50" data-ano="1" role="tab">1º ano</button>
+        <button class="tabMolde px-4 py-2 rounded-2xl border hover:bg-rose-50" data-ano="2" role="tab">2º ano</button>
+        <button class="tabMolde px-4 py-2 rounded-2xl border hover:bg-rose-50" data-ano="3" role="tab">3º ano</button>
+        <button class="tabMolde px-4 py-2 rounded-2xl border hover:bg-rose-50" data-ano="4" role="tab">4º ano</button>
+        <button class="tabMolde px-4 py-2 rounded-2xl border hover:bg-rose-50" data-ano="5" role="tab">5º ano</button>
+      </div>
+
+      <div id="listaMoldes" class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    </section>
+
+    <!-- APOIO PEDAGÓGICO -->
+    <section id="apoio" class="mt-16 scroll-mt-24">
+      <h2 class="text-3xl font-extrabold tracking-tight">Apoio pedagógico</h2>
+      <div class="mt-6 grid lg:grid-cols-3 gap-6">
+        <article class="rounded-3xl border border-rose-100 p-6 bg-white shadow-card">
+          <h3 class="text-xl font-bold">Checklist de planejamento semanal</h3>
+          <ul class="mt-3 space-y-2 text-sm text-ink-500 list-disc list-inside">
+            <li>Objetivos de aprendizagem (BNCC)</li>
+            <li>Atividades de base e enriquecimento</li>
+            <li>Avaliação formativa e registros</li>
+            <li>Diferenciação para ritmos diversos</li>
+          </ul>
+          <a class="inline-flex mt-4 items-center gap-2 px-3 py-2 rounded-2xl bg-brand-600 text-white text-sm font-semibold hover:bg-brand-700" href="assets/pdf/apoio/checklist_planejamento_semanal.pdf" download>Baixar PDF</a>
+        </article>
+        <article class="rounded-3xl border border-rose-100 p-6 bg-white shadow-card">
+          <h3 class="text-xl font-bold">Roteiro de sequência didática</h3>
+          <p class="mt-2 text-sm text-ink-500">Modelo para organizar 3–5 aulas com objetivo, materiais, passos e avaliação.</p>
+          <a class="inline-flex mt-4 items-center gap-2 px-3 py-2 rounded-2xl bg-brand-600 text-white text-sm font-semibold hover:bg-brand-700" href="assets/pdf/apoio/roteiro_sequencia_didatica_editavel.pdf" download>Baixar modelo</a>
+        </article>
+        <article class="rounded-3xl border border-rose-100 p-6 bg-white shadow-card">
+          <h3 class="text-xl font-bold">Rubricas de avaliação</h3>
+          <p class="mt-2 text-sm text-ink-500">Critérios claros para produções escritas, orais e projetos.</p>
+          <a class="inline-flex mt-4 items-center gap-2 px-3 py-2 rounded-2xl bg-brand-600 text-white text-sm font-semibold hover:bg-brand-700" href="assets/pdf/apoio/rubricas_avaliacao.pdf" download>Baixar rubricas</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre" class="mt-16 scroll-mt-24">
+      <h2 class="text-3xl font-extrabold tracking-tight">Sobre</h2>
+      <div class="mt-4 grid md:grid-cols-2 gap-6">
+        <div class="rounded-3xl border border-rose-100 p-6 bg-white shadow-card">
+          <h3 class="text-xl font-bold">Quem somos</h3>
+          <p class="mt-2 text-ink-500">Projeto pedagógico criado para apoiar docentes dos Anos Iniciais com recursos práticos, autorais e alinhados à BNCC. Conteúdos sob licença <strong>CC BY 4.0</strong>.</p>
+        </div>
+        <div class="rounded-3xl border border-rose-100 p-6 bg-white shadow-card">
+          <h3 class="text-xl font-bold">Como contribuir</h3>
+          <ol class="list-decimal list-inside mt-2 text-ink-500 space-y-1">
+            <li>Envie sugestões e materiais (PDF) com indicação de ano e BNCC.</li>
+            <li>Use nomes claros: <code>disciplina-ano-tema-codigoBNCC.pdf</code></li>
+            <li>Mantenha recursos leves (PDF otimizado).</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="mt-16 scroll-mt-24">
+      <h2 class="text-3xl font-extrabold tracking-tight">Contato</h2>
+      <div class="mt-4 rounded-3xl border border-rose-100 p-6 bg-white shadow-card">
+        <form id="formContato" class="grid sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-sm font-medium" for="nome">Nome</label>
+            <input id="nome" type="text" required class="mt-1 w-full rounded-2xl border-rose-200 focus:border-brand-500 focus:ring-brand-500" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium" for="email">E-mail</label>
+            <input id="email" type="email" required class="mt-1 w-full rounded-2xl border-rose-200 focus:border-brand-500 focus:ring-brand-500" />
+          </div>
+          <div class="sm:col-span-2">
+            <label class="block text-sm font-medium" for="mensagem">Mensagem</label>
+            <textarea id="mensagem" rows="4" required class="mt-1 w-full rounded-2xl border-rose-200 focus:border-brand-500 focus:ring-brand-500"></textarea>
+          </div>
+          <div class="sm:col-span-2 flex items-center justify-between">
+            <p class="text-sm text-ink-300">Envio via e-mail (abre o cliente padrão). Para backend, use Formspree/Netlify.</p>
+            <button class="rounded-2xl px-5 py-2 bg-brand-600 text-white font-semibold hover:bg-brand-700">Enviar</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-rose-100 py-10 text-center text-sm text-ink-500">
+    <p>© <span id="ano"></span> Professora Julia Maria — Conteúdo sob CC BY 4.0. GitHub Pages.</p>
+  </footer>
+
+  <!-- Dados de exemplo (substitua pelos PDFs reais) -->
+  <script>
+    const VERSAO = '2.0.0';
+
+    // ATIVIDADES — exemplares para popular a vitrine (você pode ampliar à vontade)
+    const ATIVIDADES = [
+      { id: 'a1', titulo: 'Adição até 20 (juntar e acrescentar)', ano: 1, disciplina: 'Matemática', bncc: ['EF01MA03'], resumo: 'Problemas simples com material dourado e reta numérica.', pdf: 'assets/pdf/matematica/1ano_adicao_ate20.pdf' },
+      { id: 'a2', titulo: 'Consciência fonológica: rimas', ano: 1, disciplina: 'Português', bncc: ['EF01LP03'], resumo: 'Identificação de rimas em parlendas e canções.', pdf: 'assets/pdf/portugues/1ano_rimas_parlendas.pdf' },
+      { id: 'a3', titulo: 'Formas geométricas no cotidiano', ano: 1, disciplina: 'Matemática', bncc: ['EF01MA12'], resumo: 'Caça às formas: círculo, quadrado, triângulo.', pdf: 'assets/pdf/matematica/1ano_formas_cotidiano.pdf' },
+
+      { id: 'a4', titulo: 'Pontuação básica (., !, ?)', ano: 2, disciplina: 'Português', bncc: ['EF02LP02'], resumo: 'Uso de sinais em frases e tirinhas.', pdf: 'assets/pdf/portugues/2ano_pontuacao_basica.pdf' },
+      { id: 'a5', titulo: 'Situações de adição e subtração', ano: 2, disciplina: 'Matemática', bncc: ['EF02MA07'], resumo: 'Problemas com juntar, comparar e separar.', pdf: 'assets/pdf/matematica/2ano_adicao_subtracao.pdf' },
+      { id: 'a6', titulo: 'Ciclo de vida dos animais', ano: 2, disciplina: 'Ciências', bncc: ['EF02CI06'], resumo: 'Sequência de imagens para ordenar e explicar.', pdf: 'assets/pdf/ciencias/2ano_ciclo_de_vida.pdf' },
+
+      { id: 'a7', titulo: 'Cadeia alimentar (recorte e monte)', ano: 3, disciplina: 'Ciências', bncc: ['EF03CI05'], resumo: 'Cartas ilustradas para montar cadeias.', pdf: 'assets/pdf/ciencias/3ano_cadeia_alimentar.pdf' },
+      { id: 'a8', titulo: 'Produção de texto: fábula', ano: 3, disciplina: 'Português', bncc: ['EF15LP17'], resumo: 'Planejamento, rascunho e revisão guiada.', pdf: 'assets/pdf/portugues/3ano_producao_fabula.pdf' },
+      { id: 'a9', titulo: 'Multiplicação como adição repetida', ano: 3, disciplina: 'Matemática', bncc: ['EF03MA07'], resumo: 'Quadros e desenhos para representar.', pdf: 'assets/pdf/matematica/3ano_multiplicacao_adicao_repetida.pdf' },
+
+      { id: 'a10', titulo: 'Sistema monetário: troco até R$ 20', ano: 4, disciplina: 'Matemática', bncc: ['EF04MA07'], resumo: 'Situações de compra e venda.', pdf: 'assets/pdf/matematica/4ano_sistema_monetario_troco.pdf' },
+      { id: 'a11', titulo: 'Regiões do Brasil (mapa e legendas)', ano: 4, disciplina: 'Geografia', bncc: ['EF04GE01'], resumo: 'Identificação e características gerais.', pdf: 'assets/pdf/geografia/4ano_regioes_brasil.pdf' },
+      { id: 'a12', titulo: 'Ângulos no cotidiano', ano: 4, disciplina: 'Matemática', bncc: ['EF04MA16'], resumo: 'Reto, agudo, obtuso — identificação prática.', pdf: 'assets/pdf/matematica/4ano_angulos_cotidiano.pdf' },
+
+      { id: 'a13', titulo: 'Frações simples (1/2, 1/3, 1/4)', ano: 5, disciplina: 'Matemática', bncc: ['EF05MA07'], resumo: 'Representação e comparação com imagens.', pdf: 'assets/pdf/matematica/5ano_fracoes_simples.pdf' },
+      { id: 'a14', titulo: 'Figuras de linguagem: metáfora', ano: 5, disciplina: 'Português', bncc: ['EF05LP09'], resumo: 'Leitura de poemas curtos e análise.', pdf: 'assets/pdf/portugues/5ano_figuras_linguagem_metafora.pdf' },
+      { id: 'a15', titulo: 'Revolução Industrial (linha do tempo)', ano: 5, disciplina: 'História', bncc: ['EF05HI07'], resumo: 'Atividade de pesquisa e síntese.', pdf: 'assets/pdf/historia/5ano_revolucao_industrial_linha_tempo.pdf' },
+    ];
+
+    // MOLDES — exemplos por ano
+    const MOLDES = [
+      { id: 'm1', titulo: 'Cartaz de rotina (A3)', ano: 1, descricao: 'Ícones grandes e cores suaves para rotina diária.', arquivo: 'assets/pdf/moldes/1ano_cartaz_rotina.pdf' },
+      { id: 'm2', titulo: 'Jogo da memória: letras', ano: 1, descricao: 'Cartas A–Z para recortar.', arquivo: 'assets/pdf/moldes/1ano_memoria_letras.pdf' },
+
+      { id: 'm3', titulo: 'Tabela de dupla-entrada', ano: 2, descricao: 'Fichas para leitura e registro.', arquivo: 'assets/pdf/moldes/2ano_tabela_dupla_entrada.pdf' },
+      { id: 'm4', titulo: 'Bingo de sílabas', ano: 2, descricao: 'Cartelas prontas para impressão.', arquivo: 'assets/pdf/moldes/2ano_bingo_silabas.pdf' },
+
+      { id: 'm5', titulo: 'Dados fracionários (NET)', ano: 3, descricao: 'Dobradura para montar dados 1/2, 1/3, 1/4.', arquivo: 'assets/pdf/moldes/3ano_dado_fracoes.pdf' },
+      { id: 'm6', titulo: 'Régua de multiplicação', ano: 3, descricao: 'Ferramenta manipulável simples.', arquivo: 'assets/pdf/moldes/3ano_regua_multiplicacao.pdf' },
+
+      { id: 'm7', titulo: 'Cartas de problemas (R$)', ano: 4, descricao: 'Situações para trabalho em grupos.', arquivo: 'assets/pdf/moldes/4ano_cartas_problemas_monetarios.pdf' },
+      { id: 'm8', titulo: 'Mapa mudo do Brasil', ano: 4, descricao: 'Com linhas de legenda.', arquivo: 'assets/pdf/moldes/4ano_mapa_mudo_brasil.pdf' },
+
+      { id: 'm9', titulo: 'Dominó de frações', ano: 5, descricao: 'Correspondências fração–figura.', arquivo: 'assets/pdf/moldes/5ano_domino_fracoes.pdf' },
+      { id: 'm10', titulo: 'Organizador de pesquisa', ano: 5, descricao: 'Planejamento de pesquisas históricas.', arquivo: 'assets/pdf/moldes/5ano_organizador_pesquisa.pdf' },
+    ];
+
+    const listaAtiv = document.getElementById('listaAtiv');
+    const listaMoldes = document.getElementById('listaMoldes');
+    const fDisc = document.getElementById('fDisc');
+    const q = document.getElementById('q');
+    const btnBuscar = document.getElementById('btnBuscar');
+    const paginacao = document.getElementById('paginacao');
+    const anoSpan = document.getElementById('ano');
+
+    const state = { filtroAnoAtv: 'all', filtroAnoMolde: 'all', filtroDisc: 'all', busca: '', pagina: 1, porPagina: 9 };
+
+    function normaliza(s){ return (s||'').toLowerCase().normalize('NFD').replace(/\p{Diacritic}/gu,''); }
+
+    function filtrarAtividades(){
+      return ATIVIDADES.filter(a => {
+        const anoOk = state.filtroAnoAtv === 'all' || a.ano === Number(state.filtroAnoAtv);
+        const discOk = state.filtroDisc === 'all' || a.disciplina === state.filtroDisc;
+        const buscaOk = !state.busca || normaliza(`${a.titulo} ${a.resumo} ${a.bncc.join(' ')}`).includes(normaliza(state.busca));
+        return anoOk && discOk && buscaOk;
+      });
+    }
+    function filtrarMoldes(){
+      return MOLDES.filter(m => state.filtroAnoMolde === 'all' || m.ano === Number(state.filtroAnoMolde));
+    }
+
+    function criaCardAtividade(a){
+      const el = document.createElement('article');
+      el.className = 'rounded-3xl border border-rose-100 bg-white p-5 shadow-card flex flex-col';
+      el.innerHTML = `
+        <div class="flex items-start justify-between gap-3">
+          <h3 class="text-lg font-bold">${a.titulo}</h3>
+          <span class="text-xs px-2 py-1 rounded-full bg-brand-100 text-brand-800 font-semibold">${a.ano}º ano</span>
+        </div>
+        <p class="mt-2 text-sm text-ink-500">${a.resumo}</p>
+        <div class="mt-3 flex flex-wrap gap-2 text-xs">
+          ${a.bncc.map(c=>`<span class='px-2 py-1 rounded-full bg-rose-50 border border-rose-100'>${c}</span>`).join('')}
+          <span class='px-2 py-1 rounded-full bg-white border border-rose-100'>${a.disciplina}</span>
+        </div>
+        <div class="mt-4 flex items-center gap-2">
+          <a href="${a.pdf}" class="inline-flex items-center gap-2 px-3 py-2 rounded-2xl bg-brand-600 text-white text-sm font-semibold hover:bg-brand-700" download>
+            Baixar PDF
+            <svg xmlns='http://www.w3.org/2000/svg' class='h-4 w-4' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path stroke-linecap='round' stroke-linejoin='round' d='M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 11l5 5 5-5M12 4v12'/></svg>
+          </a>
+          <button class="inline-flex items-center gap-2 px-3 py-2 rounded-2xl bg-white border border-rose-100 text-sm font-semibold hover:bg-rose-50" onclick="copiarLink('${location.origin}${location.pathname}${a.pdf}')">Copiar link</button>
+        </div>
+      `;
+      return el;
+    }
+
+    function criaCardMolde(m){
+      const el = document.createElement('article');
+      el.className = 'rounded-3xl border border-rose-100 bg-white p-5 shadow-card flex flex-col';
+      el.innerHTML = `
+        <div class="flex items-start justify-between gap-3">
+          <h3 class="text-lg font-bold">${m.titulo}</h3>
+          <span class="text-xs px-2 py-1 rounded-full bg-brand-100 text-brand-800 font-semibold">${m.ano}º ano</span>
+        </div>
+        <p class="mt-2 text-sm text-ink-500">${m.descricao}</p>
+        <div class="mt-4">
+          <a href="${m.arquivo}" class="inline-flex items-center gap-2 px-3 py-2 rounded-2xl bg-brand-600 text-white text-sm font-semibold hover:bg-brand-700" download>
+            Baixar molde (PDF)
+          </a>
+        </div>
+      `;
+      return el;
+    }
+
+    function renderAtividades(){
+      const dados = filtrarAtividades();
+      const inicio = (state.pagina-1)*state.porPagina;
+      const page = dados.slice(inicio, inicio+state.porPagina);
+      listaAtiv.innerHTML = '';
+      if(page.length === 0){
+        listaAtiv.innerHTML = `<div class='col-span-full text-center text-ink-500'>Nenhum resultado. Tente outros filtros.</div>`;
+      } else {
+        page.forEach(a => listaAtiv.appendChild(criaCardAtividade(a)));
+      }
+      const total = Math.ceil(dados.length / state.porPagina) || 1;
+      paginacao.innerHTML = '';
+      for(let i=1;i<=total;i++){
+        const b = document.createElement('button');
+        b.className = 'px-3 py-1 rounded-xl border ' + (i===state.pagina? 'bg-brand-600 text-white border-brand-600' : 'bg-white hover:bg-rose-50');
+        b.textContent = i;
+        b.addEventListener('click', ()=>{ state.pagina=i; renderAtividades(); window.scrollTo({top:document.getElementById('atividades').offsetTop-80, behavior:'smooth'}); });
+        paginacao.appendChild(b);
+      }
+    }
+
+    function renderMoldes(){
+      listaMoldes.innerHTML = '';
+      filtrarMoldes().forEach(m => listaMoldes.appendChild(criaCardMolde(m)));
+    }
+
+    function copiarLink(url){
+      navigator.clipboard.writeText(url).then(()=>{ alert('Link copiado!'); });
+    }
+
+    // Tabs anos
+    document.querySelectorAll('.tabAno').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        document.querySelectorAll('.tabAno').forEach(b=>b.classList.remove('active','bg-brand-100','border-brand-200','font-semibold'));
+        btn.classList.add('active','bg-brand-100','border-brand-200','font-semibold');
+        state.filtroAnoAtv = btn.dataset.ano; state.pagina=1; renderAtividades();
+      });
+    });
+    document.querySelectorAll('.tabMolde').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        document.querySelectorAll('.tabMolde').forEach(b=>b.classList.remove('active','bg-brand-100','border-brand-200','font-semibold'));
+        btn.classList.add('active','bg-brand-100','border-brand-200','font-semibold');
+        state.filtroAnoMolde = btn.dataset.ano; renderMoldes();
+      });
+    });
+
+    // Filtros
+    document.getElementById('btnMenu').addEventListener('click', ()=>{
+      document.getElementById('mobileMenu').classList.toggle('hidden');
+    });
+    fDisc.addEventListener('change', ()=>{ state.filtroDisc = fDisc.value; state.pagina=1; renderAtividades(); });
+    btnBuscar.addEventListener('click', ()=>{ state.busca=q.value; state.pagina=1; renderAtividades(); });
+    q.addEventListener('keydown', (e)=>{ if(e.key==='Enter'){ e.preventDefault(); state.busca=q.value; state.pagina=1; renderAtividades(); } });
+
+    // Contato
+    document.getElementById('formContato').addEventListener('submit', (e)=>{
+      e.preventDefault();
+      const nome = document.getElementById('nome').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const msg = document.getElementById('mensagem').value.trim();
+      const mailto = `mailto:contato@seudominio.com?subject=${encodeURIComponent('[Profª Julia Maria] Mensagem de ' + nome)}&body=${encodeURIComponent(msg + '\n\nDe: ' + nome + ' <' + email + '>')}`;
+      window.location.href = mailto;
+    });
+
+    // Inicialização
+    document.getElementById('ano').textContent = new Date().getFullYear();
+    renderAtividades();
+    renderMoldes();
+  </script>
+
+  <!--
+  =====================
+  COMO PUBLICAR (GitHub Pages)
+  =====================
+  1) Faça upload deste arquivo como /index.html no seu repositório.
+  2) Crie as pastas para PDFs: /assets/pdf/matematica, /portugues, /ciencias, /historia, /geografia, /arte, /moldes, /apoio.
+  3) Suba PDFs (mesmo que sejam placeholders) com os nomes usados acima.
+  4) Em Settings → Pages → Deploy from branch → main /root.
+  5) Acesse a URL gerada e teste os botões de download.
+  6) Personalize cores em tailwind.config (objeto brand) e textos das seções.
+  -->
+</body>
+</html>
